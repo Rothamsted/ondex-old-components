@@ -1,0 +1,8 @@
+pluginName=OndexViewPlugin
+pluginDescription=Create views on Ondex data sets
+pluginVersion=0.5
+cytoscapeVersion=2.7.0,2.8.0
+pluginCategory=Network and Attribute I/O
+projectURL=http://my-lab-site.org/myCytoscapePlugin
+pluginAuthorsInstitutions=Jochen Weile:School of Computing Science, Newcastle University
+releaseDate=November 13, 2010

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <artifactId>apps</artifactId>
+      <groupId>net.sourceforge.ondex</groupId>
+      <version>0.6.0-SNAPSHOT</version>
+   </parent>
+
+   <groupId>net.sourceforge.ondex.apps</groupId>
+   <artifactId>chemical</artifactId>
+
+   <name>Chemical Kit</name>
+
+
+
+
+
+   <build>
+      <finalName>chemicaltools-${version}</finalName>
+      <plugins>
+         <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+               <descriptorRefs>
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+               </descriptorRefs>
+               <archive>
+                  <manifest>
+                     <mainClass>net.sourceforge.ondex.chemical.SDF2PubchemFingerprints</mainClass>
+                  </manifest>
+               </archive>
+            </configuration>
+            <executions>
+               <execution>
+                  <id>make-assembly</id>
+                  <!-- this is used for inheritance merges -->
+                  <phase>package</phase>
+                  <!-- bind to the packaging phase -->
+                  <goals>
+                     <goal>single</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.openscience</groupId>
+         <artifactId>cdk</artifactId>
+         <version>1.4.13</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>com.springsource.org.apache.commons.codec</artifactId>
+         <version>1.4.0</version>
+      </dependency>
+      <dependency>
+         <groupId>org.neo4j</groupId>
+         <artifactId>neo4j</artifactId>
+         <version>1.5.M02</version>
+      </dependency>
+      <dependency>
+         <groupId>jfree</groupId>
+         <artifactId>jfreechart</artifactId>
+         <version>1.0.13</version>
+      </dependency>
+   </dependencies>
+
+</project>

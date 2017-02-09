@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <artifactId>apps</artifactId>
+      <groupId>net.sourceforge.ondex</groupId>
+      <version>0.6.0-SNAPSHOT</version>
+   </parent>
+
+   <groupId>net.sourceforge.ondex.cytoscape</groupId>
+   <artifactId>ondex-view-plugin</artifactId>
+   <packaging>jar</packaging>
+
+   <name>OndexView plugin for Cytoscape</name>
+
+   <developers>
+      <developer>
+         <id>JW</id>
+         <name>Jochen Weile</name>
+         <email>j.weile@ncl.ac.uk</email>
+         <organization>School of Computing Science, Newcastle University</organization>
+         <timezone>GMT</timezone>
+         <roles>
+            <role>Developer</role>
+         </roles>
+      </developer>
+   </developers>
+   <scm>
+      <developerConnection>scm:svn:https://ondex.svn.sourceforge.net/svnroot/ondex/trunk/apps/ondex-view-plugin</developerConnection>
+      <url>http://metagenome.ncl.ac.uk/subversion/ondex/trunk/apps/ondex-view-plugin</url>
+      <connection>scm:svn:https://ondex.svn.sourceforge.net/svnroot/ondex/trunk/apps/ondex-view-plugin</connection>
+   </scm>
+   <organization>
+      <name>School of Computing Science, University of Newcastle upon Tyne</name>
+      <url>http://www.cs.ncl.ac.uk</url>
+   </organization>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>${maven.assembly.plugin.version}</version>
+            <configuration>
+               <descriptorId>jar-with-dependencies</descriptorId>
+               <!-- <descriptors>
+			<descriptor>${basedir}/assembly.xml</descriptor>
+		  </descriptors> -->
+               <archive>
+                  <index>true</index>
+                  <manifest>
+                     <addClasspath>false</addClasspath>
+                     <mainClass>net.sourceforge.ondex.cytoscape.OndexPlugin</mainClass>
+                     <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                     <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                  </manifest>
+                  <manifestEntries>
+                     <Cytoscape-Plugin>net.sourceforge.ondex.cytoscape.OndexPlugin</Cytoscape-Plugin>
+                  </manifestEntries>
+               </archive>
+            </configuration>
+            <executions>
+               <execution>
+                  <id>make-assembly</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>attached</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+   <dependencies>
+
+<!-- Cytoscape dependencies-->      <dependency>
+         <groupId>cytoscape</groupId>
+         <artifactId>cytoscape</artifactId>
+         <version>2.7.0</version>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <groupId>cytoscape</groupId>
+         <artifactId>cytoscape-task</artifactId>
+         <version>2.7.0</version>
+         <scope>provided</scope>
+      </dependency>
+
+      <!--Ondex dependencies-->      <dependency>
+         <groupId>net.sourceforge.ondex.modules</groupId>
+         <artifactId>oxl</artifactId>
+         <version>${project.version}</version>
+         <type>jar</type>
+         <scope>compile</scope>
+      </dependency>
+      <dependency>
+         <groupId>net.sourceforge.ondex.core</groupId>
+         <artifactId>memory</artifactId>
+         <version>${project.version}</version>
+         <scope>compile</scope>
+      </dependency>
+      <!--<dependency>
+    	<groupId>net.sourceforge.ondex.core</groupId>
+    	<artifactId>workflow-api</artifactId>
+    	<version>${project.version}</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>net.sourceforge.ondex.core</groupId>
+    	<artifactId>tools</artifactId>
+    	<version>${project.version}</version>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.codehaus.woodstox</groupId>
+    	<artifactId>stax2-api</artifactId>
+    	<version>3.0.1</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.codehaus.woodstox</groupId>
+    	<artifactId>woodstox-core-lgpl</artifactId>
+    	<version>4.0.7</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>-->
+      <!-- Missing dependencies from "ondex.parent" -->
+      <!--
+    <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+    </dependency>
+-->
+      <!-- Missing dependencies from "modules" -->
+      <dependency>
+         <groupId>net.sourceforge.ondex.core</groupId>
+         <artifactId>base</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>net.sourceforge.ondex.core</groupId>
+         <artifactId>tools</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>net.sourceforge.ondex.core</groupId>
+         <artifactId>workflow-api</artifactId>
+         <version>${project.version}</version>
+      </dependency>
+
+      <!-- Missing dependencies from "oxl" -->      <dependency>
+         <groupId>com.thoughtworks.xstream</groupId>
+         <artifactId>xstream</artifactId>
+         <version>${com.thoughtworks.xstream.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.codehaus.woodstox</groupId>
+         <artifactId>woodstox-core-lgpl</artifactId>
+         <version>4.0.6</version>
+      </dependency>
+      <dependency>
+         <groupId>org.codehaus.woodstox</groupId>
+         <artifactId>stax2-api</artifactId>
+         <version>3.0.1</version>
+      </dependency>
+   </dependencies>
+
+   <repositories>
+      <repository>
+         <id>ondex_repro</id>
+         <name>ondex_repro</name>
+         <url>http://ondex.rothamsted.ac.uk/nexus/content/groups/public</url>
+      </repository>
+   </repositories>
+
+
+
+</project>
