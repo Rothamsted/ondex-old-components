@@ -42,7 +42,7 @@
                   <phase>package</phase>
                   <!-- bind to the packaging phase -->
                   <goals>
-                     <goal>single</goal>
+                     <goal>attached</goal>
                   </goals>
                </execution>
             </executions>
