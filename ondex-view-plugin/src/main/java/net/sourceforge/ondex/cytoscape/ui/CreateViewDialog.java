@@ -44,13 +44,13 @@ import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.SpinnerNumberModel;
 
-import net.sourceforge.ondex.cytoscape.task.CreateViewTask;
-import net.sourceforge.ondex.cytoscape.task.OndexTaskConfig;
-import net.sourceforge.ondex.cytoscape.task.ScanForKeysTask;
 import cytoscape.CyNetwork;
 import cytoscape.Cytoscape;
 import cytoscape.task.Task;
 import cytoscape.task.util.TaskManager;
+import net.sourceforge.ondex.cytoscape.task.CreateViewTask;
+import net.sourceforge.ondex.cytoscape.task.OndexTaskConfig;
+import net.sourceforge.ondex.cytoscape.task.ScanForKeysTask;
 
 /**
  * dialog for creating new views on background graphs

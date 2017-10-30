@@ -1,5 +1,6 @@
 package net.sourceforge.ondex.util.metadata.ops;
 
+import javax.management.relation.RelationType;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -8,7 +9,6 @@ import net.sourceforge.ondex.core.AttributeName;
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.core.MetaData;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.util.metadata.MetaDataEditor;
 import net.sourceforge.ondex.util.metadata.elements.MEList;
 import net.sourceforge.ondex.util.metadata.elements.METree;

@@ -41,11 +41,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileFilter;
 
+import cytoscape.Cytoscape;
+import cytoscape.task.util.TaskManager;
 import net.sourceforge.ondex.cytoscape.task.MapSecAttTask;
 import net.sourceforge.ondex.cytoscape.task.OndexTaskConfig;
 import net.sourceforge.ondex.cytoscape.task.ScanForKeysTask;
-import cytoscape.Cytoscape;
-import cytoscape.task.util.TaskManager;
 
 /**
  * dialog for creating secondary attribute mappings.

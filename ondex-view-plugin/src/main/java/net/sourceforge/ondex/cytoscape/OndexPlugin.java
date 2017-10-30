@@ -29,11 +29,11 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
+import cytoscape.Cytoscape;
+import cytoscape.plugin.CytoscapePlugin;
 import net.sourceforge.ondex.core.ONDEXGraph;
 import net.sourceforge.ondex.cytoscape.ui.AttributeMappingDialog;
 import net.sourceforge.ondex.cytoscape.ui.OndexMappingPanel;
-import cytoscape.Cytoscape;
-import cytoscape.plugin.CytoscapePlugin;
 
 /**
  * Main plugin class

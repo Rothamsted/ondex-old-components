@@ -11,6 +11,7 @@ import java.io.File;
 import java.util.Iterator;
 import java.util.Stack;
 
+import javax.management.relation.RelationType;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -31,10 +32,8 @@ import javax.swing.tree.TreePath;
 
 import net.sourceforge.ondex.core.AttributeName;
 import net.sourceforge.ondex.core.ConceptClass;
-import net.sourceforge.ondex.core.DataSource;
 import net.sourceforge.ondex.core.EvidenceType;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.core.Unit;
 import net.sourceforge.ondex.core.memory.MemoryONDEXGraphMetaData;
 import net.sourceforge.ondex.tools.threading.monitoring.FailableThread;

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.management.relation.RelationType;
 import javax.swing.DropMode;
 import javax.swing.Icon;
 import javax.swing.JFrame;
@@ -20,7 +21,6 @@ import javax.swing.tree.TreeSelectionModel;
 import net.sourceforge.ondex.core.AttributeName;
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.util.metadata.model.MetaDataType;
 
 /**

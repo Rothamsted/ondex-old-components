@@ -37,12 +37,11 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.event.InternalFrameAdapter;
 import javax.swing.event.InternalFrameEvent;
+
 import net.sourceforge.ondex.ONDEXPluginArguments;
 import net.sourceforge.ondex.args.FileArgumentDefinition;
-
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
 import net.sourceforge.ondex.core.memory.MemoryONDEXGraph;
-import net.sourceforge.ondex.parser.oxl.Parser;
 import net.sourceforge.ondex.tools.threading.monitoring.FailableThread;
 import net.sourceforge.ondex.tools.threading.monitoring.SimpleMonitor;
 import net.sourceforge.ondex.util.metadata.actions.CloseAction;

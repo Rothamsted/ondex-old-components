@@ -4,7 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 
-
 import com.atlassian.jira.rpc.soap.client.JiraSoapService;
 
 public class JiraConnector {

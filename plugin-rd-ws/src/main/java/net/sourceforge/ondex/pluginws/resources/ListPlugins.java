@@ -1,5 +1,6 @@
 package net.sourceforge.ondex.pluginws.resources;
 
+import java.awt.PageAttributes.MediaType;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -12,19 +13,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.lang.model.util.ElementFilter;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
 
 import net.sourceforge.ondex.pluginws.Artifact;
 import net.sourceforge.ondex.pluginws.Main;
-
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.filter.ElementFilter;
-import org.jdom.input.SAXBuilder;
 
 @Path("/list")
 public class ListPlugins {

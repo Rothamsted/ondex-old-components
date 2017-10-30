@@ -19,8 +19,6 @@
  */
 package net.sourceforge.ondex.cytoscape.task;
 
-import giny.model.Edge;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -30,13 +28,14 @@ import java.util.Set;
 
 import javax.swing.JOptionPane;
 
-import net.sourceforge.ondex.cytoscape.ui.OndexViewStyle;
 import cytoscape.CyNetwork;
 import cytoscape.CyNode;
 import cytoscape.Cytoscape;
 import cytoscape.task.Task;
 import cytoscape.task.TaskMonitor;
 import cytoscape.view.CyNetworkView;
+import giny.model.Edge;
+import net.sourceforge.ondex.cytoscape.ui.OndexViewStyle;
 
 /**
  * Creates a view on a subnetwork according to the query parameters.

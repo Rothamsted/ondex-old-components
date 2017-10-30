@@ -6,13 +6,13 @@ import java.io.FileWriter;
 import java.util.Iterator;
 import java.util.Set;
 
+import javax.management.relation.RelationType;
+
 import net.sourceforge.ondex.core.AttributeName;
-import net.sourceforge.ondex.core.DataSource;
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.core.EvidenceType;
 import net.sourceforge.ondex.core.MetaData;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.core.Unit;
 import net.sourceforge.ondex.tools.threading.monitoring.Monitorable;
 

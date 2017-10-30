@@ -40,9 +40,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+import cytoscape.Cytoscape;
 import net.sourceforge.ondex.cytoscape.mapping.EdgeMappingDescriptor;
 import net.sourceforge.ondex.cytoscape.mapping.MalformedPathException;
-import cytoscape.Cytoscape;
 
 /**
  * dialog for creating mappings

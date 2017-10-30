@@ -5,6 +5,10 @@
 
 package net.sourceforge.ondex.cytoscape.ui;
 
+import java.awt.Color;
+import java.util.HashSet;
+import java.util.Set;
+
 import cytoscape.Cytoscape;
 import cytoscape.view.CyNetworkView;
 import cytoscape.visual.EdgeAppearanceCalculator;
@@ -20,9 +24,6 @@ import cytoscape.visual.calculators.Calculator;
 import cytoscape.visual.mappings.DiscreteMapping;
 import cytoscape.visual.mappings.ObjectMapping;
 import cytoscape.visual.mappings.PassThroughMapping;
-import java.awt.Color;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  *

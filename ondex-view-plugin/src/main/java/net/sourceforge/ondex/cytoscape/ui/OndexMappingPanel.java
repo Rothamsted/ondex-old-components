@@ -49,6 +49,9 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
+import cytoscape.Cytoscape;
+import cytoscape.task.Task;
+import cytoscape.task.util.TaskManager;
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.cytoscape.OndexPlugin;
 import net.sourceforge.ondex.cytoscape.io.IOHandler;
@@ -56,9 +59,6 @@ import net.sourceforge.ondex.cytoscape.mapping.EdgeMappingDescriptor;
 import net.sourceforge.ondex.cytoscape.mapping.MalformedPathException;
 import net.sourceforge.ondex.cytoscape.task.CreateGraphTask;
 import net.sourceforge.ondex.cytoscape.task.OndexTaskConfig;
-import cytoscape.Cytoscape;
-import cytoscape.task.Task;
-import cytoscape.task.util.TaskManager;
 
 /**
  * The panel is inserted as a tab in the lefthand CytoPanel.

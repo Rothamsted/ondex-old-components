@@ -5,16 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
+import javax.xml.ws.Response;
+
+import org.omg.CORBA.Request;
+import org.w3c.dom.NodeList;
+
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
-import com.google.gwt.http.client.Response;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Element;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.Text;
 import com.google.gwt.xml.client.XMLParser;
 
 public class Config {

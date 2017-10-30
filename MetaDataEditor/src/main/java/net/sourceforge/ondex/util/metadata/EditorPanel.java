@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
+import javax.management.relation.RelationType;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -26,7 +27,6 @@ import javax.swing.text.JTextComponent;
 import net.sourceforge.ondex.core.AttributeName;
 import net.sourceforge.ondex.core.MetaData;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.core.Unit;
 import net.sourceforge.ondex.util.metadata.model.MetaDataType;
 import net.sourceforge.ondex.util.metadata.ops.UpdateOperation;

@@ -30,8 +30,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.TreeSet;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
@@ -42,6 +44,9 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
+import cytoscape.Cytoscape;
+import cytoscape.task.TaskMonitor;
+import cytoscape.task.util.TaskManager;
 import net.sourceforge.ondex.core.ONDEXGraph;
 import net.sourceforge.ondex.core.memory.MemoryONDEXGraph;
 import net.sourceforge.ondex.cytoscape.OndexPlugin;
@@ -51,12 +56,6 @@ import net.sourceforge.ondex.cytoscape.task.FileTask;
 import net.sourceforge.ondex.cytoscape.task.OndexTaskConfig;
 import net.sourceforge.ondex.exception.type.InconsistencyException;
 import net.sourceforge.ondex.exception.type.ParsingFailedException;
-import net.sourceforge.ondex.parser.oxl.Parser;
-import cytoscape.Cytoscape;
-import cytoscape.task.TaskMonitor;
-import cytoscape.task.util.TaskManager;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Handles file input and output for the plugin

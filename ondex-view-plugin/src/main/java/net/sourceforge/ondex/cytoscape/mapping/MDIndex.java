@@ -22,9 +22,10 @@ package net.sourceforge.ondex.cytoscape.mapping;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.management.relation.RelationType;
+
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.cytoscape.OndexPlugin;
 
 /**

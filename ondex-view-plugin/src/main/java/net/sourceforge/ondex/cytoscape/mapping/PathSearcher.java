@@ -23,12 +23,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+import javax.management.relation.RelationType;
+
 import net.sourceforge.ondex.core.ConceptClass;
 import net.sourceforge.ondex.core.ONDEXConcept;
 import net.sourceforge.ondex.core.ONDEXEntity;
 import net.sourceforge.ondex.core.ONDEXGraph;
 import net.sourceforge.ondex.core.ONDEXRelation;
-import net.sourceforge.ondex.core.RelationType;
 import net.sourceforge.ondex.cytoscape.OndexPlugin;
 
 /**

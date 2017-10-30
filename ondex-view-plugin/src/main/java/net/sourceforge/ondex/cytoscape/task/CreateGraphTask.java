@@ -29,33 +29,31 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import javax.management.relation.RelationType;
 import javax.swing.JOptionPane;
 
-import net.sourceforge.ondex.core.Attribute;
-import net.sourceforge.ondex.core.AttributeName;
-import net.sourceforge.ondex.core.ConceptAccession;
-import net.sourceforge.ondex.core.ConceptClass;
-import net.sourceforge.ondex.core.ConceptName;
-import net.sourceforge.ondex.core.DataSource;
-import net.sourceforge.ondex.core.EvidenceType;
-import net.sourceforge.ondex.core.ONDEXConcept;
-import net.sourceforge.ondex.core.ONDEXEntity;
-import net.sourceforge.ondex.core.ONDEXGraph;
-import net.sourceforge.ondex.core.ONDEXGraphMetaData;
-import net.sourceforge.ondex.core.ONDEXRelation;
-import net.sourceforge.ondex.core.RelationType;
-import net.sourceforge.ondex.cytoscape.OndexPlugin;
-import net.sourceforge.ondex.cytoscape.mapping.EdgeMappingDescriptor;
-import net.sourceforge.ondex.cytoscape.mapping.MDIndex;
-import net.sourceforge.ondex.cytoscape.mapping.PathSearcher;
-import net.sourceforge.ondex.cytoscape.mapping.PathSearcher.Path;
-import net.sourceforge.ondex.cytoscape.ui.CreateViewDialog;
 import cytoscape.CyEdge;
 import cytoscape.CyNode;
 import cytoscape.Cytoscape;
 import cytoscape.data.Semantics;
 import cytoscape.task.Task;
 import cytoscape.task.TaskMonitor;
+import net.sourceforge.ondex.core.AttributeName;
+import net.sourceforge.ondex.core.ConceptAccession;
+import net.sourceforge.ondex.core.ConceptClass;
+import net.sourceforge.ondex.core.ConceptName;
+import net.sourceforge.ondex.core.EvidenceType;
+import net.sourceforge.ondex.core.ONDEXConcept;
+import net.sourceforge.ondex.core.ONDEXEntity;
+import net.sourceforge.ondex.core.ONDEXGraph;
+import net.sourceforge.ondex.core.ONDEXGraphMetaData;
+import net.sourceforge.ondex.core.ONDEXRelation;
+import net.sourceforge.ondex.cytoscape.OndexPlugin;
+import net.sourceforge.ondex.cytoscape.mapping.EdgeMappingDescriptor;
+import net.sourceforge.ondex.cytoscape.mapping.MDIndex;
+import net.sourceforge.ondex.cytoscape.mapping.PathSearcher;
+import net.sourceforge.ondex.cytoscape.mapping.PathSearcher.Path;
+import net.sourceforge.ondex.cytoscape.ui.CreateViewDialog;
 
 /**
  * worker thread for creating a new graph.

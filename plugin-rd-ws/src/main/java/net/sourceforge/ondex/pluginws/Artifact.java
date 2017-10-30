@@ -1,7 +1,5 @@
 package net.sourceforge.ondex.pluginws;
 
-import org.jdom.Element;
-
 /**
  * Represents a maven artifact returned by nexus
  * 

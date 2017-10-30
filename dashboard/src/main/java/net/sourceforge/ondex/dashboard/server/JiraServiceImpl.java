@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.sourceforge.ondex.dashboard.client.Dashboard;
-import net.sourceforge.ondex.dashboard.client.JiraService;
-
 import com.atlassian.jira.rpc.soap.client.JiraSoapService;
 import com.atlassian.jira.rpc.soap.client.RemoteFilter;
 import com.atlassian.jira.rpc.soap.client.RemoteIssue;
 import com.atlassian.jira.rpc.soap.client.RemoteProject;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
+import net.sourceforge.ondex.dashboard.client.Dashboard;
+import net.sourceforge.ondex.dashboard.client.JiraService;
 
 public class JiraServiceImpl extends RemoteServiceServlet implements
 		JiraService {
