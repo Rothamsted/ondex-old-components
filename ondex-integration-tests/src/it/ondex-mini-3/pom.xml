@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+     <groupId>net.sourceforge.ondex</groupId>
+     <artifactId>ondex-full</artifactId>
+     <version>@project.version@</version>
+   </parent>
+      
+   <groupId>net.sourceforge.ondex.modules.integration</groupId>
+   <artifactId>ondex-mini-3</artifactId>
+   <packaging>jar</packaging>
+
+   <name>Integration test for ondex-mini</name>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>${maven.dependency.plugin.version}</version>
+            <executions>
+               <execution>
+                  <id>unpack-ondex-mini</id>
+                  <phase>generate-test-resources</phase>
+                  <goals>
+                     <goal>unpack</goal>
+                  </goals>
+                  <configuration>
+                     <artifactItems>
+                        <artifactItem>
+                           <groupId>net.sourceforge.ondex.apps</groupId>
+                           <artifactId>ondex-mini</artifactId>
+                           <version>${project.version}</version>
+                           <classifier>packaged-distro</classifier>
+                           <type>zip</type>
+                           <overWrite>false</overWrite>
+                           <outputDirectory>${project.build.directory}/</outputDirectory>
+                           <includes>**/*</includes>
+                        </artifactItem>
+                     </artifactItems>
+                  </configuration>
+               </execution>
+               <execution>
+                  <id>addPlugins</id>
+                  <phase>generate-test-resources</phase>
+                  <goals>
+                     <goal>copy</goal>
+                  </goals>
+                  <configuration>
+                     <artifactItems>
+                        <artifactItem>
+                           <groupId>net.sourceforge.ondex.modules</groupId>
+                           <artifactId>iah</artifactId>
+                           <version>${project.version}</version>
+                           <classifier>jar-with-dependencies</classifier>
+                           <type>jar</type>
+                           <outputDirectory>${project.build.directory}/ondex-mini-${project.version}/plugins</outputDirectory>
+                        </artifactItem>
+                        <artifactItem>
+                           <groupId>net.sourceforge.ondex.modules</groupId>
+                           <artifactId>interaction</artifactId>
+                           <version>${project.version}</version>
+                           <classifier>jar-with-dependencies</classifier>
+                           <type>jar</type>
+                           <outputDirectory>${project.build.directory}/ondex-mini-${project.version}/plugins</outputDirectory>
+                        </artifactItem>
+                     </artifactItems>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>2.4.3</version>
+            <executions>
+               <execution>
+                  <id>copy-test-data</id>
+                  <phase>generate-test-resources</phase>
+                  <goals>
+                     <goal>copy-resources</goal>
+                  </goals>
+                  <configuration>
+                     <outputDirectory>${project.build.directory}/ondex-mini-${project.version}</outputDirectory>
+                     <resources>
+                        <resource>
+                           <directory>src/test/files</directory>
+                        </resource>
+                     </resources>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.4.3</version>
+            <configuration>
+               <forkMode>always</forkMode>
+               <forkedProcessTimeoutInSeconds>700</forkedProcessTimeoutInSeconds>
+               <argLine>-Xms1G -Xmx1G -Dondex.dir=${basedir}/data</argLine>
+               <excludes>
+                  <exclude>net/sourceforge/ondex/apps/*</exclude>
+               </excludes>
+               <failIfNoTests>true</failIfNoTests>
+               <enableAssertions>true</enableAssertions>
+               <redirectTestOutputToFile>true</redirectTestOutputToFile>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+               <source>1.8</source>
+               <target>1.8</target>
+               <showWarnings>true</showWarnings>
+               <showDeprecation>true</showDeprecation>
+               <maxmem>1024m</maxmem>
+               <encoding>UTF-8</encoding>
+               <fork>true</fork>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+
+   <dependencies>
+
+<!-- depedenencies required for building the run-time env -->      
+		 <dependency>
+         <groupId>net.sourceforge.ondex.apps</groupId>
+         <artifactId>ondex-mini</artifactId>
+         <version>${project.version}</version>
+         <type>zip</type>
+         <classifier>packaged-distro</classifier>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>net.sourceforge.ondex.modules</groupId>
+         <artifactId>iah</artifactId>
+         <version>${project.version}</version>
+         <classifier>jar-with-dependencies</classifier>
+         <type>jar</type>
+      </dependency>
+
+      <dependency>
+         <groupId>net.sourceforge.ondex.modules</groupId>
+         <artifactId>interaction</artifactId>
+         <version>${project.version}</version>
+         <classifier>jar-with-dependencies</classifier>
+         <type>jar</type>
+      </dependency>
+
+      <!-- dependencies actually needed to compile/run the test code -->      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>3.8.1</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-exec</artifactId>
+         <version>1.0.1</version>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
+</project>

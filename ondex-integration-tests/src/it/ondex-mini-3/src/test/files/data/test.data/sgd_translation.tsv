@@ -1,0 +1,38 @@
+#CONCEPT_CLASS
+ARS	ARS
+ARS consensus sequence	ARSCons
+binding_site	STBS
+CDEI	CDEI
+CDEII	CDEII
+CDEIII	CDEIII
+centromere	Centromere	
+gene_cassette	GeneCassette
+long_terminal_repeat	LTR
+mating_locus	MatingLocus
+multigene locus	MultiGeneLocus
+ncRNA	NcRNAGene
+non_transcribed_region	NonTranscribedRegion
+ORF	Gene
+pseudogene	Pseudogene
+repeat_region	Repeat
+retrotransposon	Retrotransposon
+rRNA	RRNAGene
+snoRNA	SNORNAGene
+snRNA	SNRNAGene
+telomere	TRR
+telomeric_repeat	TelomericRepeat
+transposable_element_gene	Gene
+tRNA	TRNAGene
+W_region	WRegion
+X_element_combinatorial_repeats	STR
+X_element_core_sequence	XCore
+X_region	XRegion
+Y'_element	YPrime
+Y_region	YRegion
+Z1_region	Z1Region
+Z2_region	Z2Region
+#EVIDENCE_TYPE
+Dubious	SGD_Dubious
+silenced_gene	SGD_Silenced
+Uncharacterized	SGD_Uncharacterized
+Verified	SGD_Verified

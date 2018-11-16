@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ondex version="3.0">
+  <Workflow>
+    <Graph name="newgraph">
+      <Arg name="Type">MEMORY</Arg>
+      <Arg name="graphId">default</Arg>
+    </Graph>
+    <Parser name="oxl">
+      <Arg name="InputFile">F:\workspace_ondex_June2010\integration\src\it\CORE-17\src\test\files\GrameneTraitOntology.xml.gz</Arg>
+      <Arg name="graphId">default</Arg>
+    </Parser>
+  </Workflow>
+</Ondex>
+

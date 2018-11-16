@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Ondex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="ONDEXParameters.xsd">
+  <DefaultGraph name="yeast_test" type="memory">
+    <Parameter name="ReplaceExisting">true</Parameter>
+  </DefaultGraph>
+	<Parser name="yeastgenome">
+		<Parameter name="InputFile">data/test.data/sgd_mockup.tsv</Parameter>
+		<Parameter name="TranslationFile">data/test.data/sgd_translation.tsv</Parameter>
+		<Parameter name="CreateRNAConcepts">true</Parameter>
+		<Parameter name="InferRelativeLocations">true</Parameter>
+	</Parser>
+	<Parser name="biogrid">
+		<Parameter name="InputFile">data/test.data/biogrid_mockup.tsv</Parameter>
+		<Parameter name="TranslationFile">data/test.data/biogrid_translation.tsv</Parameter>
+		<Parameter name="TaxIDRestriction">4932</Parameter>
+	</Parser>
+	<Transformer name="yeastmerger"/>
+	<Export name="oxl">
+		<Parameter name="ExportFile">yeast_test.xml.gz</Parameter>
+		<Parameter name="GZip">true</Parameter>
+	</Export>
+</Ondex>
