@@ -22,7 +22,6 @@
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
-            <version>${maven.assembly.plugin.version}</version>
             <configuration>
                <descriptorId>jar-with-dependencies</descriptorId>
                <!-- <descriptors> <descriptor>${basedir}/assembly.xml</descriptor> 
@@ -48,8 +47,6 @@
             </executions>
          </plugin>
       </plugins>
-      <outputDirectory>${basedir}/${target.dir}/classes</outputDirectory>
-      <testOutputDirectory>${basedir}/${target.dir}/test-classes</testOutputDirectory>
    </build>
 
    <dependencies>
